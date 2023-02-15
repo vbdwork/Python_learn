@@ -1,0 +1,367 @@
+# Задача A 
+# =============================================================================
+# Приветствие пользователя  
+"""
+name = input()
+dela = input()
+print('Как Вас зовут?')
+print(f'Здравствуйте, {name}!')
+print('Как дела?')
+if 'хорошо' in dela:
+    print('Я за вас рада!')
+elif 'плохо' in dela:
+    print('Всё наладится!')
+"""
+# =============================================================================
+
+# Задача B 
+# =============================================================================
+# Кто быстрее?  
+"""
+roadlength = 43872
+speedPetya = int(input())
+sreedVasya = int(input())
+if speedPetya > sreedVasya:
+    print('Петя')
+elif speedPetya < sreedVasya:
+    print('Вася')
+else: 
+    print('Победителя нет')
+"""
+# =============================================================================
+
+# Задача С 
+# =============================================================================
+# Кто быстрее на этот раз?
+"""
+roadlength = 43872
+speedPetya = int(input())
+speedVasya = int(input())
+speedTolya = int(input())
+if speedPetya > speedVasya > speedTolya or speedPetya > speedTolya > speedVasya:
+    print('Петя')
+elif speedVasya > speedPetya > speedTolya or speedVasya > speedTolya > speedPetya:
+    print('Вася')
+elif speedTolya > speedPetya > speedVasya or speedTolya > speedVasya > speedPetya:
+    print('Толя')
+else:
+    print('Победителя нет')
+"""
+# =============================================================================
+
+# Задача D
+# =============================================================================
+"""
+roadlength = 43872
+speedPetya = int(input())
+speedVasya = int(input())
+speedTolya = int(input())
+if speedPetya > speedVasya > speedTolya:
+    print(f'1. Петя\n2. Вася\n3. Толя')
+elif speedPetya > speedTolya > speedVasya:
+    print(f'1. Петя\n2. Толя\n3. Вася')
+elif speedVasya > speedTolya > speedPetya:
+    print(f'1. Вася\n2. Толя\n3. Петя')
+elif speedVasya > speedPetya > speedTolya:
+    print(f'1. Вася\n2. Петя\n3. Толя')
+elif speedTolya > speedPetya > speedVasya:
+    print(f'1. Толя\n2. Петя\n3. Вася')
+elif speedTolya > speedVasya > speedPetya:
+    print(f'1. Толя\n2. Вася\n3. Петя')
+else:
+    print('Победителя нет')
+"""
+# =============================================================================
+
+# Задача E
+# =============================================================================
+"""
+N = int(input())
+M = int(input())
+Petya = 6 + N
+Vasya = 12 + M
+if Petya > Vasya:
+    print('Петя')
+else:
+    print('Вася')
+"""
+# =============================================================================
+ 
+# Задача F
+# =============================================================================
+# Определение високосного года
+"""
+year = int(input())
+if year%4 != 0:
+    print('NO')
+elif year%100 != 0:
+    print('YES')
+elif  year%400 == 0:
+    print('YES')
+else:
+    print('NO')
+"""
+# =============================================================================
+
+# Задача G
+# =============================================================================   
+# А роза упала на лапу Азора
+"""
+num = int(input()[:4])
+a = num // 1000
+b = num // 100 - num // 1000 * 10
+c = int((num % 100 - num % 10) / 10)
+d = num % 10
+if (a == d) and (b == c):
+    print('YES')
+else:
+    print('NO')
+"""
+# =============================================================================
+
+# Задача H
+# =============================================================================   
+# Зайка-1
+"""
+terr = str(input())
+if 'зайка' in terr:
+    print('YES')
+else:
+    print('NO')
+"""
+# =============================================================================
+
+# Задача I
+# =============================================================================   
+# Первому игроку приготовиться
+"""
+name1 = str(input())
+name2 = str(input())
+name3 = str(input())
+print(min(name1, name2, name3))
+"""
+# =============================================================================
+
+# Задача J
+# =============================================================================   
+# Лучшая защита — шифрование
+"""
+num = int(input()[:3])
+hun = num // 100
+dec = int((num % 100 - num % 10) / 10)
+ones = num % 10
+sum1 = dec + ones
+sum2 = hun + dec
+if sum1 > sum2:
+    print(f'{sum1}{sum2}')
+else:
+    print(f'{sum2}{sum1}')
+"""
+# =============================================================================
+
+# Задача K
+# =============================================================================   
+# Красота спасёт мир
+"""
+num = int(input()[:3])
+hun = num // 100
+dec = int((num % 100 - num % 10) / 10)
+ones = num % 10
+summa = hun + dec + ones
+v1 = max(hun, dec, ones)
+v2 = min(hun, dec, ones)
+v3 = (summa - v1 - v2) * 2
+if v1 + v2 == v3:
+    print('YES')
+else:
+    print('NO')
+"""
+# =============================================================================
+
+# Задача L
+# =============================================================================   
+# Музыкальный инструмент
+"""
+len1 = float(input())
+len2 = float(input())
+len3 = float(input())
+if len1 + len2 > len3 and len2 + len3 > len1 and len1 + len3 > len2:
+    print('YES')
+else:
+    print('NO')
+"""
+# =============================================================================
+
+# Задача M
+# =============================================================================   
+# Властелин Чисел: Братство общей цифры
+"""
+elf = int(input()[:2])
+gnom = int(input()[:2])
+human = int(input()[:2])
+elf_dec = elf // 10
+elf_ones = elf % 10
+gnom_dec = gnom // 10
+gnom_ones = gnom % 10
+human_dec = human // 10
+human_ones = human % 10
+if elf_dec == gnom_dec == human_dec:
+    print(elf_dec)
+elif elf_ones == gnom_ones == human_ones:
+    print(elf_ones)
+"""
+# =============================================================================
+
+# Задача N
+# =============================================================================   
+# Властелин Чисел: Братство общей цифры
+"""
+num = int(input()[:3])
+num_hun = num // 100
+num_dec = num // 10 - num // 100 * 10
+num_ones = num % 10
+summa = num_hun + num_dec + num_ones
+ord1 = max(num_hun, num_dec, num_ones)
+ord3 = min(num_hun, num_dec, num_ones)
+ord2 = summa - ord1 - ord3
+if ord3 != 0:
+    print(f'{ord3}{ord2} {ord1}{ord2}')
+else:
+    print(f'{ord2}{ord3} {ord1}{ord2}')
+"""
+# =============================================================================
+
+# Задача O
+# =============================================================================   
+# Властелин Чисел: Возвращение Цезаря
+"""
+num1 = int(input()[:2])
+num2 = int(input()[:2])
+num1_dec = num1 // 10
+num2_dec = num2 // 10
+num1_ones = num1 % 10
+num2_ones = num2 % 10
+summa = num1_dec + num2_dec + num1_ones + num2_ones
+ord1 = max(num1_dec, num2_dec, num1_ones, num2_ones)
+ord3 = min(num1_dec, num2_dec, num1_ones, num2_ones)
+ord2 = (summa - ord1 - ord3) % 10
+print(f'{ord1}{ord2}{ord3}')
+"""
+# =============================================================================
+
+# Задача P (NOT DONE)
+# =============================================================================   
+# Легенды велогонок возвращаются: кто быстрее?
+"""
+roadlength = 43872
+speedPetya = int(input())
+speedVasya = int(input())
+speedTolya = int(input())
+"""
+# =============================================================================
+
+# Задача Q
+# =============================================================================   
+# Корень зла
+"""
+a = float(input())
+b = float(input())
+c = float(input())
+if a == b == c == 0:
+    print('Infinite solutions')
+elif a == b == 0:
+    print('No solution')
+elif a == 0:
+    x = round(-c / b, 2)
+    print('%.2f' % x)
+elif b == 0:
+    x1 = round((-c / a) ** 0.5, 2)
+    x2 = -x1
+    if x1 < x2:
+        print('%.2f' % x1, '%.2f' % x2)
+    else:
+        print('%.2f' % x2, '%.2f' % x1)
+else:
+    D = b ** 2 - 4 * a * c
+    if D < 0:
+        print('No solution')
+    elif D > 0:
+        x1 = round((-b + D ** 0.5) / 2 / a, 2)
+        x2 = round((-b - D ** 0.5) / 2 / a, 2)
+        if x1 < x2:
+            print('%.2f' % x1, '%.2f' % x2)
+        else:
+            print('%.2f' % x2, '%.2f' % x1)
+    else:
+        x = round(-b / 2 / a, 2)
+        print('%.2f' % x)
+"""
+# =============================================================================
+
+# Задача Q
+# =============================================================================   
+# Территория зла
+"""
+len1 = abs(float(input()))
+len2 = abs(float(input()))
+len3 = abs(float(input()))
+if len1 + len2 > len3 and len2 + len3 > len1 and len1 + len3 > len2:
+    sqlen1 = len1 ** 2
+    sqlen2 = len2 ** 2
+    sqlen3 = len3 ** 2
+    summa = sqlen1 + sqlen2 + sqlen3
+    big = max(sqlen1, sqlen2, sqlen3)
+    other = summa - big 
+    if big < other:
+        print('крайне мала')
+    elif big > other:
+        print('велика')
+    else:
+       print('100%')
+else:
+    print('Не существует')
+"""
+# =============================================================================
+
+# Задача S (NOT DONE)
+# =============================================================================   
+# Автоматизация безопасности
+"""(not done)
+X = float(input())
+Y = float(input())
+h = (X ** 2 + X ** 2) ** 0.5
+if h > 10:
+    print('Вы вышли в море и рискуете быть съеденным акулой!')
+elif (X > 0 and Y > 0 and h < 5):
+    print('Опасность! Покиньте зону как можно скорее!')
+elif X < 0 and Y > 0 and :
+    print('Опасность! Покиньте зону как можно скорее!')
+elif X < 0 and Y < 0 and :
+    print('Опасность! Покиньте зону как можно скорее!')
+elif X > 0 and Y < 0 and :
+    print('Опасность! Покиньте зону как можно скорее!')
+else:
+    print('Зона безопасна. Продолжайте работу.')
+"""
+# =============================================================================
+
+# Задача T (NOT DONE)
+# =============================================================================   
+# Зайка — 2
+"""(not done)
+str1 = str(input())
+str2 = str(input())
+str3 = str(input())
+this = 'NO'
+if 'зайка' in str1:
+    this = str1
+if 'зайка' in str2:
+    if str2 < this:
+        this = str2
+if 'зайка' in str3:
+    if str3 < this:
+        this = str3
+if len(this) != 2:
+    print(this, len(this))
+"""
+# =============================================================================
